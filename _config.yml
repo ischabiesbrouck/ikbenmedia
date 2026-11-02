@@ -1,0 +1,4 @@
+exclude:
+  - bouw.py
+  - README.md
+

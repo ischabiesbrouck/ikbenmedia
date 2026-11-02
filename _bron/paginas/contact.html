@@ -1,0 +1,93 @@
+<!--meta
+{
+  "pad": "contact/",
+  "titel": "Contact | IkBenMedia, grafisch ontwerp in Haarlem",
+  "omschrijving": "Neem contact op met IkBenMedia in Haarlem. Bel of sms 06 28 35 12 90, mail info@ikbenmedia.nl of stuur direct een projectaanvraag.",
+  "sectie": "contact",
+  "paginatype": "ContactPage",
+  "prioriteit": "0.8",
+  "kruimels": [["Contact", null]]
+}
+-->
+<div class="wrap contact-raster">
+  <div class="contact-info">
+    <p class="held-boven">Contact</p>
+    <h1>Meer weten? Stuur een bericht.</h1>
+    <p class="dienst-intro">Vertel kort wat u zoekt. Ik reageer meestal binnen twee werkdagen.</p>
+
+    <dl class="gegevens">
+      <div>
+        <dt>Bellen of sms</dt>
+        <dd><a href="tel:+31628351290">06 28 35 12 90</a></dd>
+      </div>
+      <div>
+        <dt>E-mail</dt>
+        <dd><a href="mailto:info@ikbenmedia.nl">info@ikbenmedia.nl</a></dd>
+      </div>
+      <div>
+        <dt>Adres</dt>
+        <dd>Rijnstraat 129<br>2025 RR Haarlem</dd>
+      </div>
+    </dl>
+
+    <div class="tip">
+      <h2>Handig om te weten</h2>
+      <ul>
+        <li>Bellen of een sms sturen werkt het snelst.</li>
+        <li>Op WhatsApp ben ik minder snel bereikbaar.</li>
+        <li>Spraakberichten beantwoord ik niet. Stuur liever een tekstbericht of bel even.</li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="formulier" data-formulier novalidate>
+    <h2>Projectaanvraag</h2>
+    <p class="formulier-uitleg">Na het versturen opent uw e-mailprogramma met een ingevuld bericht. U hoeft alleen nog op verzenden te drukken.</p>
+
+    <div class="veld">
+      <label for="v-naam">Uw naam</label>
+      <input id="v-naam" name="naam" type="text" autocomplete="name" required aria-describedby="fout-naam">
+      <p class="fout" id="fout-naam" hidden></p>
+    </div>
+    <div class="veld">
+      <label for="v-email">Uw e-mailadres</label>
+      <input id="v-email" name="email" type="email" autocomplete="email" required aria-describedby="fout-email">
+      <p class="fout" id="fout-email" hidden></p>
+    </div>
+    <div class="veld">
+      <label for="v-telefoon">Telefoonnummer <span class="optioneel">(mag leeg blijven)</span></label>
+      <input id="v-telefoon" name="telefoon" type="tel" autocomplete="tel">
+    </div>
+    <fieldset class="veld">
+      <legend>Waar kan ik u mee helpen?</legend>
+      <div class="keuzes">
+        <label class="keuze"><input type="checkbox" name="dienst" value="Logo"><span>Logo</span></label>
+        <label class="keuze"><input type="checkbox" name="dienst" value="Huisstijl"><span>Huisstijl</span></label>
+        <label class="keuze"><input type="checkbox" name="dienst" value="Website"><span>Website</span></label>
+        <label class="keuze"><input type="checkbox" name="dienst" value="Social media"><span>Social media</span></label>
+        <label class="keuze"><input type="checkbox" name="dienst" value="Drukwerk"><span>Drukwerk</span></label>
+        <label class="keuze"><input type="checkbox" name="dienst" value="Video of advies"><span>Video of advies</span></label>
+      </div>
+    </fieldset>
+    <div class="veld">
+      <label for="v-bericht">Uw vraag of idee</label>
+      <textarea id="v-bericht" name="bericht" rows="6" required aria-describedby="hint-bericht fout-bericht"></textarea>
+      <p class="hint" id="hint-bericht">Bijvoorbeeld: wat wilt u laten maken, voor wie, en wanneer moet het klaar zijn?</p>
+      <p class="fout" id="fout-bericht" hidden></p>
+    </div>
+    <fieldset class="veld">
+      <legend>Budget <span class="optioneel">(een schatting is genoeg)</span></legend>
+      <div class="keuzes">
+        <label class="keuze"><input type="radio" name="budget" value="tot 1.000 euro"><span>Tot € 1.000</span></label>
+        <label class="keuze"><input type="radio" name="budget" value="1.000 tot 2.500 euro"><span>€ 1.000 tot 2.500</span></label>
+        <label class="keuze"><input type="radio" name="budget" value="2.500 tot 5.000 euro"><span>€ 2.500 tot 5.000</span></label>
+        <label class="keuze"><input type="radio" name="budget" value="meer dan 5.000 euro"><span>Meer dan € 5.000</span></label>
+        <label class="keuze"><input type="radio" name="budget" value="weet ik nog niet" checked><span>Weet ik nog niet</span></label>
+      </div>
+    </fieldset>
+
+    <button class="knop knop-rood knop-breed" type="submit">Verstuur aanvraag</button>
+    <p class="formulier-status" data-status role="status" aria-live="polite"></p>
+    <p class="klein">Uw gegevens gebruik ik alleen om op uw vraag te reageren. Lees meer in de <a href="{{r}}privacy/">privacyverklaring</a>.</p>
+  </form>
+</div>
