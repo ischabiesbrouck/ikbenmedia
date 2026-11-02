@@ -8,7 +8,7 @@
   <link rel="canonical" href="{{canonical}}">
   <meta name="robots" content="{{robots}}">
   <meta name="author" content="Ischa Biesbrouck">
-  <meta name="theme-color" content="#141414">
+  <meta name="theme-color" content="#0D0D0D">
   <meta name="format-detection" content="telephone=no">
 
   <meta property="og:type" content="{{og_type}}">
@@ -32,6 +32,7 @@
   <link rel="manifest" href="{{r}}site.webmanifest">
 
   <link rel="preload" href="{{r}}assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{r}}assets/fonts/lora-var-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{r}}assets/css/style.css?v={{css_v}}">
   <script>document.documentElement.classList.add("js")</script>
   <script type="application/ld+json">
@@ -53,7 +54,7 @@
     <div class="kop-balk wrap">
       <a class="merk" href="{{r}}./" aria-label="IkBenMedia, naar de homepage">
         <svg class="merk-teken" aria-hidden="true" focusable="false"><use href="#logo"/></svg>
-        <span class="merk-naam">IkBenMedia</span>
+        <span class="merk-naam">Ik<b>Ben</b>Media</span>
       </a>
       <button class="menuknop" type="button" aria-expanded="false" aria-controls="hoofdmenu">
         <span class="menuknop-tekst">Menu</span>
@@ -61,7 +62,7 @@
       </button>
       <nav class="hoofdnav" id="hoofdmenu" aria-label="Hoofdmenu">
         <ul>{{nav}}</ul>
-        <a class="knop knop-klein" href="tel:+31628351290">Bel 06 28 35 12 90</a>
+        <a class="knop knop-klein" href="{{r}}contact/">Start een project</a>
       </nav>
     </div>
   </header>
@@ -78,7 +79,7 @@
       <div class="voet-raster">
         <div class="voet-merk">
           <svg class="voet-teken" aria-hidden="true" focusable="false"><use href="#logo"/></svg>
-          <p>IkBenMedia is het ontwerpbureau van Ischa Biesbrouck in Haarlem.</p>
+          <p>Projecten met een verhaal,<br><em>ontwerp met een ziel.</em></p>
         </div>
         <nav aria-label="Diensten">
           <h2 class="voet-kop">Diensten</h2>
@@ -106,7 +107,7 @@
       </div>
 
       <div class="voet-onder">
-        <p>&copy; {{jaar}} IkBenMedia. Projecten met een verhaal, ontwerp met een ziel.</p>
+        <p>&copy; {{jaar}} IkBenMedia, grafisch ontwerp in Haarlem</p>
         <a href="#inhoud" class="naar-boven">Terug naar boven</a>
       </div>
     </div>

@@ -16,96 +16,110 @@
 -->
 <section class="held" aria-labelledby="held-titel">
   <div class="wrap held-raster">
-    <div class="held-tekst">
-      <p class="held-boven">Ischa Biesbrouck, grafisch ontwerper in Haarlem</p>
-      <h1 id="held-titel" class="held-titel">
-        <span class="regel"><span>Ik ontwerp logo's,</span></span>
-        <span class="regel"><span>huisstijlen</span></span>
-        <span class="regel"><span>en websites.</span></span>
-      </h1>
+    <div class="held-meta reveal">
+      <p>Intelligent ontwerp</p>
+      <p>Ischa Biesbrouck</p>
+      <p>Haarlem, Nederland</p>
+    </div>
+
+    <h1 id="held-titel" class="held-titel">
+      <span class="regel"><span>Ik ontwerp logo's,</span></span>
+      <span class="regel"><span>huisstijlen en</span></span>
+      <span class="regel"><span>websites met</span></span>
+      <span class="regel"><span>een <em>ziel</em>.</span></span>
+    </h1>
+
+    <div class="held-tekst reveal">
       <p class="held-intro">Voor ondernemers en organisaties in Haarlem en daarbuiten. U werkt rechtstreeks met mij, van het eerste gesprek tot het laatste bestand.</p>
       <div class="knoppen">
-        <a class="knop knop-rood" href="{{r}}contact/">Plan een kennismaking</a>
-        <a class="knop knop-lijn" href="#werk">Bekijk mijn werk</a>
+        <a class="knop knop-vol" href="{{r}}contact/">Plan een kennismaking</a>
+        <a class="pijllink" href="#werk">Bekijk mijn werk</a>
       </div>
     </div>
 
-    <figure class="held-beeld" aria-labelledby="held-onderschrift">
+    <figure class="held-beeld reveal" data-spot>
+      <img class="held-foto" src="{{r}}assets/img/hero-architectuur-1800.webp"
+           srcset="{{r}}assets/img/hero-architectuur-900.webp 900w, {{r}}assets/img/hero-architectuur-1800.webp 1800w"
+           sizes="(min-width: 960px) 50vw, 100vw"
+           alt="" width="1800" height="1200" fetchpriority="high" decoding="async" data-parallax>
       <canvas class="mozaiek" data-mozaiek aria-hidden="true"></canvas>
       <svg class="mozaiek-reserve" aria-hidden="true" focusable="false"><use href="#logo"/></svg>
-      <figcaption id="held-onderschrift">
+      <figcaption>
         <span>Het logo van IkBenMedia, opgebouwd uit losse blokjes.</span>
-        <button type="button" class="schud" data-schud>Schud het logo door elkaar</button>
+        <button type="button" class="schud" data-schud>Schud het door elkaar</button>
       </figcaption>
     </figure>
   </div>
-  <p class="wrap held-slogan">Projecten met een verhaal, ontwerp met een ziel.</p>
+
+  <div class="band" aria-hidden="true">
+    <div class="band-spoor">
+      <span>Logo</span><span>Huisstijl</span><span>Website</span><span>Social media</span><span>Drukwerk</span><span>Videografie</span><span>Advies</span>
+      <span>Logo</span><span>Huisstijl</span><span>Website</span><span>Social media</span><span>Drukwerk</span><span>Videografie</span><span>Advies</span>
+    </div>
+  </div>
 </section>
 
 <section class="sectie" id="diensten" aria-labelledby="diensten-titel">
   <div class="wrap">
     <header class="sectie-kop reveal">
-      <h2 id="diensten-titel">Wat ik voor u maak</h2>
+      <span class="sectie-nr" aria-hidden="true">01</span>
+      <h2 id="diensten-titel">Wat ik voor u <em>maak</em></h2>
       <p>Alles wat uw bedrijf nodig heeft om herkend en onthouden te worden. Ontworpen door één persoon, dus alles past bij elkaar.</p>
     </header>
 
-    <ul class="dienstenlijst">
+    <ul class="dienstenlijst" data-diensten>
       <li class="reveal">
-        <a href="{{r}}diensten/logo-ontwerp/">
+        <a href="{{r}}diensten/logo-ontwerp/" data-voorbeeld="{{r}}assets/img/dienst-logo.webp">
           <span class="dl-nr" aria-hidden="true">01</span>
           <span class="dl-naam">Logo-ontwerp</span>
           <span class="dl-uitleg">Een herkenbaar teken dat bij u past</span>
-          <img class="dl-beeld" src="{{r}}assets/img/dienst-logo.webp" alt="" width="640" height="1398" loading="lazy" decoding="async">
         </a>
       </li>
       <li class="reveal">
-        <a href="{{r}}diensten/huisstijl/">
+        <a href="{{r}}diensten/huisstijl/" data-voorbeeld="{{r}}assets/img/dienst-huisstijl.webp">
           <span class="dl-nr" aria-hidden="true">02</span>
           <span class="dl-naam">Huisstijl</span>
           <span class="dl-uitleg">Kleuren, letters en beeld die bij elkaar horen</span>
-          <img class="dl-beeld" src="{{r}}assets/img/dienst-huisstijl.webp" alt="" width="640" height="1398" loading="lazy" decoding="async">
         </a>
       </li>
       <li class="reveal">
-        <a href="{{r}}diensten/website-laten-maken/">
+        <a href="{{r}}diensten/website-laten-maken/" data-voorbeeld="{{r}}assets/img/dienst-website.webp">
           <span class="dl-nr" aria-hidden="true">03</span>
           <span class="dl-naam">Website</span>
           <span class="dl-uitleg">Snel, duidelijk en goed te vinden in Google</span>
-          <img class="dl-beeld" src="{{r}}assets/img/dienst-website.webp" alt="" width="234" height="512" loading="lazy" decoding="async">
         </a>
       </li>
       <li class="reveal">
-        <a href="{{r}}diensten/social-media/">
+        <a href="{{r}}diensten/social-media/" data-voorbeeld="{{r}}assets/img/dienst-social.webp">
           <span class="dl-nr" aria-hidden="true">04</span>
           <span class="dl-naam">Social media</span>
           <span class="dl-uitleg">Berichten en profielen in uw eigen stijl</span>
-          <img class="dl-beeld" src="{{r}}assets/img/dienst-social.webp" alt="" width="488" height="1065" loading="lazy" decoding="async">
         </a>
       </li>
       <li class="reveal">
-        <a href="{{r}}diensten/drukwerk/">
+        <a href="{{r}}diensten/drukwerk/" data-voorbeeld="{{r}}assets/img/dienst-drukwerk.webp">
           <span class="dl-nr" aria-hidden="true">05</span>
           <span class="dl-naam">Drukwerk</span>
           <span class="dl-uitleg">Van visitekaartje tot poster, klaar voor de drukker</span>
-          <img class="dl-beeld" src="{{r}}assets/img/dienst-drukwerk.webp" alt="" width="640" height="1398" loading="lazy" decoding="async">
         </a>
       </li>
       <li class="reveal">
-        <a href="{{r}}diensten/videografie-en-advies/">
+        <a href="{{r}}diensten/videografie-en-advies/" data-voorbeeld="{{r}}assets/img/dienst-meer.webp">
           <span class="dl-nr" aria-hidden="true">06</span>
-          <span class="dl-naam">Video en advies</span>
+          <span class="dl-naam">&amp; meer</span>
           <span class="dl-uitleg">Videografie, marketingadvies en trainingen</span>
-          <img class="dl-beeld" src="{{r}}assets/img/dienst-meer.webp" alt="" width="640" height="1398" loading="lazy" decoding="async">
         </a>
       </li>
     </ul>
+    <div class="zweefbeeld" data-zweefbeeld aria-hidden="true"><img alt=""></div>
   </div>
 </section>
 
-<section class="sectie sectie-donker" id="werk" aria-labelledby="werk-titel">
+<section class="sectie" id="werk" aria-labelledby="werk-titel">
   <div class="wrap">
     <header class="sectie-kop reveal">
-      <h2 id="werk-titel">Recent werk</h2>
+      <span class="sectie-nr" aria-hidden="true">02</span>
+      <h2 id="werk-titel">Recent <em>werk</em></h2>
       <p>Een paar opdrachten en ontwerpstudies van het afgelopen jaar.</p>
     </header>
 
@@ -155,61 +169,82 @@
   </div>
 </section>
 
-<section class="sectie" id="werkwijze" aria-labelledby="werkwijze-titel">
+<section class="sectie sectie-dicht" id="werkwijze" aria-labelledby="werkwijze-titel">
   <div class="wrap">
     <header class="sectie-kop reveal">
-      <h2 id="werkwijze-titel">Zo werken we samen</h2>
+      <span class="sectie-nr" aria-hidden="true">03</span>
+      <h2 id="werkwijze-titel">Zo werken we <em>samen</em></h2>
       <p>Vier stappen. U weet steeds wat er gebeurt en wat de volgende stap is.</p>
     </header>
-    <ol class="stappen" data-stappen>
-      <li>
-        <span class="stap-nr" aria-hidden="true">1</span>
+    <ol class="stappen">
+      <li class="reveal">
+        <span class="stap-nr" aria-hidden="true">01</span>
         <h3>Kennismaken</h3>
         <p>We praten over uw bedrijf, uw klanten en wat u wilt bereiken. Daarna krijgt u een offerte en een planning.</p>
       </li>
-      <li>
-        <span class="stap-nr" aria-hidden="true">2</span>
+      <li class="reveal">
+        <span class="stap-nr" aria-hidden="true">02</span>
         <h3>Schetsen</h3>
         <p>Ik zoek uit wat bij u past en laat u een paar richtingen zien. Ik leg uit waarom ik voor iets kies.</p>
       </li>
-      <li>
-        <span class="stap-nr" aria-hidden="true">3</span>
+      <li class="reveal">
+        <span class="stap-nr" aria-hidden="true">03</span>
         <h3>Uitwerken</h3>
         <p>We kiezen samen één richting. Die maak ik af. U geeft feedback en ik pas het aan.</p>
       </li>
-      <li>
-        <span class="stap-nr" aria-hidden="true">4</span>
+      <li class="reveal">
+        <span class="stap-nr" aria-hidden="true">04</span>
         <h3>Opleveren</h3>
         <p>U krijgt alle bestanden die u nodig heeft, met uitleg. Ook daarna kunt u bij mij terecht.</p>
       </li>
     </ol>
+
+    <aside class="marketing reveal" aria-labelledby="marketing-titel">
+      <h3 id="marketing-titel">Marketing <em>nodig?</em></h3>
+      <p>Wilt u advies over uw merk, uw website of uw social media? Ik denk graag met u mee en geef tips die u direct kunt gebruiken.</p>
+      <a class="knop knop-lijn" href="{{r}}diensten/videografie-en-advies/">Vertel mij meer</a>
+    </aside>
   </div>
 </section>
 
-<section class="sectie sectie-zacht" id="over" aria-labelledby="over-titel">
+<section class="sectie licht" id="over" aria-labelledby="over-titel">
   <div class="wrap over-raster">
+    <div class="over-meta reveal">
+      <p>04, over mij</p>
+      <p>Haarlem,<br>Nederland</p>
+    </div>
+    <div class="over-tekst">
+      <p class="over-boven reveal">Wie ben ik?</p>
+      <h2 id="over-titel" class="reveal">ischa<br>biesbrouck</h2>
+      <p class="over-rol reveal">ontwerper en oprichter<br>van ikbenmedia</p>
+      <div class="lopende-tekst reveal">
+        <p class="groot">Al zo lang ik me kan herinneren, vind ik rust in het ordenen van chaos tot iets nieuws.</p>
+        <p>Letters, vormen, kleuren, beelden en ruimte zijn voor mij bouwstenen. Met IkBenMedia maak ik daar mijn werk van. Ik werk zelfstandig, zodat ik elke opdracht met volle aandacht kan doen.</p>
+        <p>Ik zoek steeds naar wat echt waarde heeft, voorbij de mode van het moment. Daarom ontwerp ik met oog voor detail en met een verhaal erachter.</p>
+      </div>
+      <a class="pijllink reveal" href="{{r}}over-mij/">Lees mijn verhaal</a>
+    </div>
     <figure class="over-foto reveal">
       <img src="{{r}}assets/img/ischa-portret-854.webp"
            srcset="{{r}}assets/img/ischa-portret-480.webp 480w, {{r}}assets/img/ischa-portret-854.webp 854w"
            sizes="(min-width: 900px) 40vw, 100vw"
            alt="Ischa Biesbrouck, eigenaar van IkBenMedia, in zwart-wit" width="854" height="928" loading="lazy" decoding="async">
     </figure>
-    <div class="over-tekst">
-      <h2 id="over-titel" class="reveal">Hallo, ik ben Ischa</h2>
-      <div class="reveal lopende-tekst">
-        <p class="groot">Al zo lang ik me kan herinneren, vind ik rust in het ordenen van chaos tot iets nieuws.</p>
-        <p>Letters, vormen, kleuren, beelden en ruimte zijn voor mij bouwstenen. Met IkBenMedia maak ik daar mijn werk van. Ik werk zelfstandig, zodat ik elke opdracht met volle aandacht kan doen.</p>
-        <p>Ik zoek steeds naar wat echt waarde heeft, voorbij de mode van het moment. Daarom ontwerp ik met oog voor detail en met een verhaal erachter.</p>
-      </div>
-      <a class="pijllink reveal" href="{{r}}over-mij/">Lees meer over mij</a>
-    </div>
+  </div>
+  <div class="wrap">
+    <ul class="waarom">
+      <li class="reveal"><h3>Direct contact</h3><p>U spreekt altijd met de ontwerper zelf. Wat u vertelt, komt zonder omweg in het ontwerp.</p></li>
+      <li class="reveal"><h3>Snel schakelen</h3><p>Korte lijnen. Uw feedback verwerk ik zelf, dus u hoeft niet lang te wachten.</p></li>
+      <li class="reveal"><h3>Eén visie</h3><p>Van eerste schets tot oplevering in één hand. Alles past bij elkaar.</p></li>
+    </ul>
   </div>
 </section>
 
 <section class="sectie" id="relaties" aria-labelledby="relaties-titel">
   <div class="wrap">
     <header class="sectie-kop reveal">
-      <h2 id="relaties-titel">Met wie ik werk</h2>
+      <span class="sectie-nr" aria-hidden="true">05</span>
+      <h2 id="relaties-titel"><em>Relaties</em></h2>
       <p>Organisaties waarmee ik samenwerk of verbonden ben.</p>
     </header>
     <ul class="relaties">
@@ -240,7 +275,8 @@
 <section class="sectie sectie-lijn" id="vragen" aria-labelledby="vragen-titel">
   <div class="wrap vragen-raster">
     <header class="sectie-kop sectie-kop-smal reveal">
-      <h2 id="vragen-titel">Veelgestelde vragen</h2>
+      <span class="sectie-nr" aria-hidden="true">06</span>
+      <h2 id="vragen-titel">Veelgestelde <em>vragen</em></h2>
       <p>Staat uw vraag er niet tussen? <a href="{{r}}contact/">Neem gerust contact op.</a></p>
     </header>
     {{faq}}

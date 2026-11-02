@@ -40,19 +40,43 @@
     reveals.forEach((el) => el.classList.add("is-in"));
   }
 
-  /* ── Stappen: de lijn tekent mee met het scrollen ── */
-  const stappen = document.querySelector("[data-stappen]");
-  if (stappen) {
-    const items = [...stappen.children];
-    const update = () => {
-      const r = stappen.getBoundingClientRect();
-      const p = Math.min(1, Math.max(0, (innerHeight * 0.75 - r.top) / (r.height + innerHeight * 0.15)));
-      stappen.style.setProperty("--voortgang", minderBeweging ? 1 : p.toFixed(3));
-      items.forEach((li, i) => li.classList.toggle("is-aan", minderBeweging || p >= i / items.length + 0.02));
+  /* ── Header krijgt een achtergrond na scrollen; de heldfoto beweegt mee ── */
+  const kop = document.querySelector(".kop");
+  const heldFoto = document.querySelector("[data-parallax]");
+  let scrollBezig = false;
+  const opScroll = () => {
+    scrollBezig = false;
+    kop.classList.toggle("is-gescrold", scrollY > 8);
+    if (heldFoto && !minderBeweging && scrollY < innerHeight * 1.5) {
+      heldFoto.style.setProperty("--py", `${(scrollY * 0.12).toFixed(1)}px`);
+    }
+  };
+  addEventListener("scroll", () => { if (!scrollBezig) { scrollBezig = true; requestAnimationFrame(opScroll); } }, { passive: true });
+  opScroll();
+
+  /* ── Diensten: een beeld zweeft mee met de muis ── */
+  const zweef = document.querySelector("[data-zweefbeeld]");
+  if (zweef && fijneMuis && !minderBeweging) {
+    const img = zweef.querySelector("img");
+    let x = 0, y = 0, doelX = 0, doelY = 0, loopt = 0;
+    const volg = () => {
+      x += (doelX - x) * 0.16; y += (doelY - y) * 0.16;
+      zweef.style.left = `${x}px`; zweef.style.top = `${y}px`;
+      loopt = Math.abs(doelX - x) + Math.abs(doelY - y) > 0.5 ? requestAnimationFrame(volg) : 0;
     };
-    addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
-    addEventListener("resize", update);
-    update();
+    document.querySelectorAll("[data-voorbeeld]").forEach((a) => {
+      a.addEventListener("pointerenter", (e) => {
+        img.src = a.dataset.voorbeeld;
+        if (!zweef.classList.contains("is-zichtbaar")) { x = doelX = e.clientX + 150; y = doelY = e.clientY; }
+        zweef.classList.add("is-zichtbaar");
+      });
+      a.addEventListener("pointermove", (e) => {
+        doelX = e.clientX + 150; doelY = e.clientY;
+        if (!loopt) loopt = requestAnimationFrame(volg);
+      });
+      a.addEventListener("pointerleave", () => zweef.classList.remove("is-zichtbaar"));
+    });
+    addEventListener("scroll", () => zweef.classList.remove("is-zichtbaar"), { passive: true });
   }
 
   /* ── Footer: letters worden breder en zwaarder rond de muis ── */
@@ -167,7 +191,7 @@
     const ctx = canvas.getContext("2d");
     const figuur = canvas.closest("figure");
     const held = canvas.closest("section");
-    const PAPIER = "#F2EFE9", ROOD = "#FF6A4D";
+    const PAPIER = "#F5F5F7", ROOD = "#8E8E93";
     let B = 0, H = 0, dpr = 1, schaal = 1, cel = 9, ox = 0, oy = 0;
     let delen = [], raf = 0, zichtbaar = true, muis = null, uiteen = canvas.dataset.start === "chaos";
 
@@ -175,7 +199,7 @@
       dpr = Math.min(devicePixelRatio || 1, 2);
       B = canvas.clientWidth; H = canvas.clientHeight;
       canvas.width = Math.round(B * dpr); canvas.height = Math.round(H * dpr);
-      schaal = Math.min((B * 0.86) / 284, (H * 0.9) / 374);
+      schaal = Math.min((B * 0.62) / 284, (H * 0.64) / 374);
       cel = 9 * schaal;
       ox = (B - 284 * schaal) / 2 - 128 * schaal;
       oy = (H - 374 * schaal) / 2 - 82 * schaal;
@@ -301,6 +325,8 @@
       canvas.addEventListener("pointermove", (e) => {
         const r = canvas.getBoundingClientRect();
         muis = { x: e.clientX - r.left, y: e.clientY - r.top };
+        canvas.style.setProperty("--mx", `${muis.x}px`);
+        canvas.style.setProperty("--my", `${muis.y}px`);
         start();
       });
       canvas.addEventListener("pointerleave", () => { muis = null; start(); });
